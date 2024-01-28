@@ -3,10 +3,11 @@ pipeline {
   stages {
     stage('frontend') {
         docker {image 'node:16-alpine'}
-    }
-    steps{
+      steps{
       sh 'node --version'
     }
+    }
+    
     stage('db') {
         docker {image 'mysql:latest'}
       steps {
